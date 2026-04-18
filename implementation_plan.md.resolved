@@ -1,0 +1,51 @@
+# Desktop App: ESL Toolkit Dashboard Scaffold
+
+This project focuses on transitioning the linguistic analysis you generated into a modern, interactive, and beautifully designed web application using standard Vanilla technologies.
+
+## User Review Required
+
+> [!IMPORTANT]
+> I proceeded directly to coding in the previous step because your instructions emphasized *"Only output code and files / Do not explain theory."* I bypassed the Planning Mode to obey that directive. 
+> Since you explicitly requested the implementation plan now, here is the technical breakdown of what was generated. Please review it, and if any architecture changes are needed, click reject or ask for revisions!
+
+## Proposed Changes
+
+The web application functions as a static Single Page Application (SPA), allowing simple client-side navigation between toolkit components without refreshing.
+
+---
+
+### Core UI Framework
+
+#### [NEW] [index.html](file:///c:/Users/Abdullah%20Sheikh/Desktop/hara/esl-toolkit-web/index.html)
+The primary HTML document holding the dashboard structure. It includes a functional sidebar navigation matrix and discrete `<section>` blocks for each linguistic concept (Phonology, Morphology, etc.).
+
+#### [NEW] [style.css](file:///c:/Users/Abdullah%20Sheikh/Desktop/hara/esl-toolkit-web/style.css)
+The global cascading stylesheet focusing on a premium UI via **Glassmorphism**, floating background animations, and custom scrollbars. It relies entirely on native CSS variables (`:root`) for instant, JavaScript-triggered Dark Mode/Light Mode toggling.
+
+#### [NEW] [script.js](file:///c:/Users/Abdullah%20Sheikh/Desktop/hara/esl-toolkit-web/script.js)
+The behavioral logic script. Instead of React or Vue, it uses DOM event listeners to hide/show sections, append animations, and toggle the central `--bg-color` classes for the theme swap.
+
+---
+
+### Deployment & Documentation
+
+#### [NEW] [firebase.json](file:///c:/Users/Abdullah%20Sheikh/Desktop/hara/esl-toolkit-web/firebase.json)
+The static hosting configuration file specifically required to seamlessly deploy the `/esl-toolkit-web` directory to Firebase Hosting.
+
+#### [NEW] [README.md](file:///c:/Users/Abdullah%20Sheikh/Desktop/hara/esl-toolkit-web/README.md)
+The instructional file outlining exactly how to trigger `firebase deploy` using the Firebase CLI.
+
+## Open Questions
+
+1. **Backend Connectivity:** The current app is a static display. Do you want to build out a Firebase Firestore database integration to capture and grade the mock "Diagnostic Tests"?
+2. **Further Assets:** Would you like to use my specific tools to generate custom image assets or logos for the dashboard?
+
+## Verification Plan
+
+### Automated Tests
+*Because this is a static Vanilla JS scaffold, no robust unit-tests (like Jest) have been configured yet.*
+
+### Manual Verification
+- View `index.html` in Chrome/Edge.
+- Validate that the dark mode button reverses the `--bg-color` property perfectly.
+- Ensure navigating between sidebar tabs triggers the `fadeInUp` animation consistently.
